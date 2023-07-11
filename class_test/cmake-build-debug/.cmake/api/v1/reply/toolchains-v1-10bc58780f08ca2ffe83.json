@@ -1,0 +1,71 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"E:/kaifa/C/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+						"E:/kaifa/C/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+						"E:/kaifa/C/mingw64/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : 
+					[
+						"E:/kaifa/C/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0",
+						"E:/kaifa/C/mingw64/lib/gcc",
+						"E:/kaifa/C/mingw64/x86_64-w64-mingw32/lib",
+						"E:/kaifa/C/mingw64/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex",
+						"advapi32",
+						"shell32",
+						"user32",
+						"kernel32",
+						"iconv",
+						"mingw32",
+						"gcc",
+						"moldname",
+						"mingwex"
+					]
+				},
+				"path" : "E:/kaifa/C/mingw64/bin/gcc.exe",
+				"version" : "8.1.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "E:/kaifa/C/mingw64/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
