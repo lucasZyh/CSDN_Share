@@ -1,0 +1,470 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         24/Oct/2023  18:58:27 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\Source\Key.c                                #
+#    Command line       =  -f E:\ZigBee-Project\test07\Projects\zstack\Sample #
+#                          s\TestAPP\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoor #
+#                          d.cfg (-DCPU32MHZ -DROOT=__near_func               #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f       #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig. #
+#                          cfg (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\Source\Key.c -D ZIGBEEPRO -D ZTOOL_P1 -D    #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC E:\ZigBee-Project\test07\P #
+#                          rojects\zstack\Samples\TestAPP\CC2530DB\Coordinato #
+#                          rEB-Pro\List\ -lA E:\ZigBee-Project\test07\Project #
+#                          s\zstack\Samples\TestAPP\CC2530DB\CoordinatorEB-Pr #
+#                          o\List\ --diag_suppress Pe001,Pa010 -o             #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\CoordinatorEB-Pro\Obj\ -e --debug  #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I E:\ZigBee-Project\test07\P #
+#                          rojects\zstack\Samples\TestAPP\CC2530DB\ -I        #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\SOURCE\ -I                      #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\ZMAIN\TI2530DB\ -I        #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MT\ -I   #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCL #
+#                          UDE\ -I E:\ZigBee-Project\test07\Projects\zstack\S #
+#                          amples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          HAL\TARGET\CC2530EB\ -I E:\ZigBee-Project\test07\P #
+#                          rojects\zstack\Samples\TestAPP\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\OSAL\MCU\CCSOC\ -I                 #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\OSAL\INC #
+#                          LUDE\ -I E:\ZigBee-Project\test07\Projects\zstack\ #
+#                          Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \STACK\AF\ -I E:\ZigBee-Project\test07\Projects\zs #
+#                          tack\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPO #
+#                          NENTS\STACK\NWK\ -I E:\ZigBee-Project\test07\Proje #
+#                          cts\zstack\Samples\TestAPP\CC2530DB\..\..\..\..\.. #
+#                          \COMPONENTS\STACK\SEC\ -I                          #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\STACK\SA #
+#                          PI\ -I E:\ZigBee-Project\test07\Projects\zstack\Sa #
+#                          mples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\S #
+#                          TACK\SYS\ -I E:\ZigBee-Project\test07\Projects\zst #
+#                          ack\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPON #
+#                          ENTS\STACK\ZDO\ -I E:\ZigBee-Project\test07\Projec #
+#                          ts\zstack\Samples\TestAPP\CC2530DB\..\..\..\..\..\ #
+#                          COMPONENTS\ZMAC\F8W\ -I E:\ZigBee-Project\test07\P #
+#                          rojects\zstack\Samples\TestAPP\CC2530DB\..\..\..\. #
+#                          .\..\COMPONENTS\ZMAC\ -I                           #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES #
+#                          \SADDR\ -I E:\ZigBee-Project\test07\Projects\zstac #
+#                          k\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\SERVICES\SDATA\ -I E:\ZigBee-Project\test07\Pro #
+#                          jects\zstack\Samples\TestAPP\CC2530DB\..\..\..\..\ #
+#                          ..\COMPONENTS\MAC\INCLUDE\ -I                      #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\HIGH #
+#                          _LEVEL\ -I E:\ZigBee-Project\test07\Projects\zstac #
+#                          k\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\MAC\LOW_LEVEL\srf04\ -I                         #
+#                          E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_ #
+#                          LEVEL\srf04\SINGLE_CHIP\ -Ohz                      #
+#    List file          =  E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\CoordinatorEB-Pro\List\Key.lst     #
+#    Object file        =  E:\ZigBee-Project\test07\Projects\zstack\Samples\T #
+#                          estAPP\CC2530DB\CoordinatorEB-Pro\Obj\Key.r51      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+E:\ZigBee-Project\test07\Projects\zstack\Samples\TestAPP\Source\Key.c
+      1          #include<iocc2530.h>
+
+   \                                 In  segment SFR_AN, at 0x89
+   \   unsigned char volatile __sfr P0IFG
+   \                     P0IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8a
+   \   unsigned char volatile __sfr P1IFG
+   \                     P1IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8b
+   \   unsigned char volatile __sfr P2IFG
+   \                     P2IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8d
+   \   unsigned char volatile __sfr P1IEN
+   \                     P1IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9a
+   \   unsigned char volatile __sfr IEN2
+   \                     IEN2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xab
+   \   unsigned char volatile __sfr P0IEN
+   \                     P0IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xac
+   \   unsigned char volatile __sfr P2IEN
+   \                     P2IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb8
+   \   union <unnamed> volatile __sfr _A_IEN1
+   \                     _A_IEN1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc0
+   \   union <unnamed> volatile __sfr _A_IRCON
+   \                     _A_IRCON:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe8
+   \   union <unnamed> volatile __sfr _A_IRCON2
+   \                     _A_IRCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf5
+   \   unsigned char volatile __sfr P2SEL
+   \                     P2SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      2          #include "TestApp.h"
+      3          #include "OSAL_Timers.h"
+      4          extern unsigned char TestAPP_TaskID;
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      5          void delay()
+   \                     delay:
+      6          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+      7             int i,j;
+      8             for(i=0;i<1000;i++)
+      9               for(j=0;j<30;j++);
+     10          }
+   \   000000   02....       LJMP    ?BRET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     11          void KeysIntCfg()
+   \                     KeysIntCfg:
+     12          {//Key3  Key4   Key5
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     13               
+     14               P1SEL &=~0X02;
+   \   000000   53F4FD       ANL     0xf4,#0xfd
+     15               P1DIR &=~0X02;
+   \   000003   53FEFD       ANL     0xfe,#0xfd
+     16               IEN2|=0x10;//开P1IE组中断
+   \   000006   439A10       ORL     0x9a,#0x10
+     17               P1IEN|=0x02;//开Key3组内中断
+   \   000009   438D02       ORL     0x8d,#0x2
+     18               PICTL|=0x02;//设置P1_1为下降沿
+   \   00000C   438C02       ORL     0x8c,#0x2
+     19               
+     20               P2SEL &=~0X01;
+   \   00000F   53F5FE       ANL     0xf5,#0xfe
+     21               P2DIR &=~0X01;
+   \   000012   53FFFE       ANL     0xff,#0xfe
+     22               IEN2|=0x02;
+   \   000015   439A02       ORL     0x9a,#0x2
+     23               P2IEN|=0x01;
+   \   000018   43AC01       ORL     0xac,#0x1
+     24               PICTL|=0x08;//设置P2_0为下降沿
+   \   00001B   438C08       ORL     0x8c,#0x8
+     25               
+     26               P0SEL &=~0X20;
+   \   00001E   53F3DF       ANL     0xf3,#0xdf
+     27               P0DIR &=~0X20;
+   \   000021   53FDDF       ANL     0xfd,#0xdf
+     28               P0IE=1;//或者写成 IEN1|=0x20
+   \   000024   D2BD         SETB    0xb8.5
+     29               P0IEN|=0x20;
+   \   000026   43AB20       ORL     0xab,#0x20
+     30               PICTL|=0x01;//设置P0_5为下降沿
+   \   000029   438C01       ORL     0x8c,#0x1
+     31               
+     32               
+     33               EA=1;      //开总中断
+   \   00002C   D2AF         SETB    0xa8.7
+     34          }
+   \   00002E   02....       LJMP    ?BRET
+   \   000031                REQUIRE P1SEL
+   \   000031                REQUIRE P1DIR
+   \   000031                REQUIRE IEN2
+   \   000031                REQUIRE P1IEN
+   \   000031                REQUIRE PICTL
+   \   000031                REQUIRE P2SEL
+   \   000031                REQUIRE P2DIR
+   \   000031                REQUIRE P2IEN
+   \   000031                REQUIRE P0SEL
+   \   000031                REQUIRE P0DIR
+   \   000031                REQUIRE _A_IEN1
+   \   000031                REQUIRE P0IEN
+   \   000031                REQUIRE _A_IEN0
+     35          
+     36          #pragma vector=P1INT_VECTOR
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+     37          __interrupt void Key3_ISR() //P1_1
+   \                     Key3_ISR:
+     38          {
+   \   000000   C0E0         PUSH    A
+   \   000002   74F2         MOV     A,#-0xe
+   \   000004   12....       LCALL   ?INTERRUPT_ENTER_XSP
+   \   000007                ; Saved register size: 14
+   \   000007                ; Auto size: 0
+     39               
+     40               if(P1IFG & 0X02)
+   \   000007   E58A         MOV     A,0x8a
+   \   000009   A2E1         MOV     C,0xE0 /* A   */.1
+   \   00000B   5003         JNC     ??CrossCallReturnLabel_0
+     41               {
+     42                  osal_start_timerEx(TestAPP_TaskID,TestAPP_EVT,25);
+   \   00000D                ; Setup parameters for call to function osal_start_timerEx
+   \   00000D   12....       LCALL   ?Subroutine1
+     43               }
+     44               P1IFG =0;
+   \                     ??CrossCallReturnLabel_0:
+   \   000010   758A00       MOV     0x8a,#0x0
+     45               P1IF=0;
+   \   000013   C2EB         CLR     0xe8.3
+     46          }
+   \   000015                REQUIRE ?Subroutine0
+   \   000015                REQUIRE P1IFG
+   \   000015                REQUIRE _A_IRCON2
+   \   000015                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F01         MOV     R7,#0x1
+   \   000002   02....       LJMP    ?INTERRUPT_LEAVE_XSP
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   7C19         MOV     R4,#0x19
+   \   000002   7D00         MOV     R5,#0x0
+   \   000004   7A02         MOV     R2,#0x2
+   \   000006   7B00         MOV     R3,#0x0
+   \   000008   90....       MOV     DPTR,#TestAPP_TaskID
+   \   00000B   E0           MOVX    A,@DPTR
+   \   00000C   F9           MOV     R1,A
+   \   00000D   12....       LCALL   ??osal_start_timerEx?relay
+   \   000010   22           RET
+     47          #pragma vector=P2INT_VECTOR
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+     48          __interrupt void Key4_ISR()//P2_0
+   \                     Key4_ISR:
+     49          {
+   \   000000   C0E0         PUSH    A
+   \   000002   74F2         MOV     A,#-0xe
+   \   000004   12....       LCALL   ?INTERRUPT_ENTER_XSP
+   \   000007                ; Saved register size: 14
+   \   000007                ; Auto size: 0
+     50          
+     51               if(P2IFG & 0X01)
+   \   000007   E58B         MOV     A,0x8b
+   \   000009   A2E0         MOV     C,0xE0 /* A   */.0
+   \   00000B   5003         JNC     ??CrossCallReturnLabel_1
+     52               { 
+     53                  osal_start_timerEx(TestAPP_TaskID,TestAPP_EVT,25);
+   \   00000D                ; Setup parameters for call to function osal_start_timerEx
+   \   00000D   12....       LCALL   ?Subroutine1
+     54               }
+     55               P2IFG =0;
+   \                     ??CrossCallReturnLabel_1:
+   \   000010   758B00       MOV     0x8b,#0x0
+     56               P2IF=0;
+   \   000013   C2E8         CLR     0xe8.0
+     57          }
+   \   000015   80..         SJMP    ?Subroutine0
+   \   000017                REQUIRE P2IFG
+   \   000017                REQUIRE _A_IRCON2
+     58          #pragma vector=P0INT_VECTOR
+
+   \                                 In  segment NEAR_CODE, align 1, keep-with-next
+     59          __interrupt void Key5_ISR()//P0_5
+   \                     Key5_ISR:
+     60          {
+   \   000000   C0E0         PUSH    A
+   \   000002   74F2         MOV     A,#-0xe
+   \   000004   12....       LCALL   ?INTERRUPT_ENTER_XSP
+   \   000007                ; Saved register size: 14
+   \   000007                ; Auto size: 0
+     61          
+     62              if(P0IFG & 0X20)
+   \   000007   E589         MOV     A,0x89
+   \   000009   A2E5         MOV     C,0xE0 /* A   */.5
+   \   00000B   5003         JNC     ??CrossCallReturnLabel_2
+     63              {
+     64                 osal_start_timerEx(TestAPP_TaskID,TestAPP_EVT,25);
+   \   00000D                ; Setup parameters for call to function osal_start_timerEx
+   \   00000D   12....       LCALL   ?Subroutine1
+     65              }
+     66               P0IFG =0;
+   \                     ??CrossCallReturnLabel_2:
+   \   000010   758900       MOV     0x89,#0x0
+     67               P0IF=0;
+   \   000013   C2C5         CLR     0xc0.5
+     68          }
+   \   000015   80..         SJMP    ?Subroutine0
+   \   000017                REQUIRE P0IFG
+   \   000017                REQUIRE _A_IRCON
+
+   \                                 In  segment INTVEC, offset 0x33, root
+   \                     `??Key4_ISR??INTVEC 51`:
+   \   000033   02....       LJMP       (Key4_ISR)
+
+   \                                 In  segment INTVEC, offset 0x6b, root
+   \                     `??Key5_ISR??INTVEC 107`:
+   \   00006B   02....       LJMP       (Key5_ISR)
+
+   \                                 In  segment INTVEC, offset 0x7b, root
+   \                     `??Key3_ISR??INTVEC 123`:
+   \   00007B   02....       LJMP       (Key3_ISR)
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??KeysIntCfg?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    KeysIntCfg
+
+   Maximum stack usage in bytes:
+
+     Function                ISTACK PSTACK XSTACK
+     --------                ------ ------ ------
+     Key3_ISR                    0      0     14
+       -> osal_start_timerEx     0      0     28
+     Key4_ISR                    0      0     14
+       -> osal_start_timerEx     0      0     28
+     Key5_ISR                    0      0     14
+       -> osal_start_timerEx     0      0     28
+     KeysIntCfg                  0      0      0
+     delay                       0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label         Bytes
+     --------------         -----
+     P0IFG                     1
+     P1IFG                     1
+     P2IFG                     1
+     PICTL                     1
+     P1IEN                     1
+     IEN2                      1
+     _A_IEN0                   1
+     P0IEN                     1
+     P2IEN                     1
+     _A_IEN1                   1
+     _A_IRCON                  1
+     _A_IRCON2                 1
+     P0SEL                     1
+     P1SEL                     1
+     P2SEL                     1
+     P0DIR                     1
+     P1DIR                     1
+     P2DIR                     1
+     delay                     3
+     KeysIntCfg               49
+     Key3_ISR                 21
+     ?Subroutine0              5
+     ?Subroutine1             17
+     Key4_ISR                 23
+     Key5_ISR                 23
+     ??Key4_ISR??INTVEC 51     3
+     ??Key5_ISR??INTVEC 107    3
+     ??Key3_ISR??INTVEC 123    3
+     ??delay?relay             6
+     ??KeysIntCfg?relay        6
+
+ 
+ 52 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+  9 bytes in segment INTVEC
+ 89 bytes in segment NEAR_CODE
+ 18 bytes in segment SFR_AN
+ 
+ 153 bytes of CODE memory (+  9 bytes shared)
+   0 bytes of DATA memory (+ 18 bytes shared)
+
+Errors: none
+Warnings: none

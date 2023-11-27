@@ -1,0 +1,300 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         25/Oct/2023  16:25:25 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          Source\74LS164_8LED.c                              #
+#    Command line       =  -f C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ #
+#                          ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples\TestA #
+#                          PP\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg   #
+#                          (-DCPU32MHZ -DROOT=__near_func -DBLINK_LEDS) -f    #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg     #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          Source\74LS164_8LED.c -D ZIGBEEPRO -D              #
+#                          NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D            #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -D xPOWER_SAVING -lC C:\Users\yuan_hao\Desktop\´óÈ #
+#                          ýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zs #
+#                          tack\Samples\TestAPP\CC2530DB\EndDeviceEB-Pro\List #
+#                          \ -lA C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ #
+#                          ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples\Te #
+#                          stAPP\CC2530DB\EndDeviceEB-Pro\List\               #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\EndDeviceEB-Pro\Obj\ -e --debug           #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\yuan_hao\Desktop\ #
+#                          ´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects #
+#                          \zstack\Samples\TestAPP\CC2530DB\ -I               #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\..\SOURCE\ -I C:\Users\yuan_hao\Desktop\´ #
+#                          óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\ #
+#                          zstack\Samples\TestAPP\CC2530DB\..\..\..\ZMAIN\TI2 #
+#                          530DB\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁ #
+#                          ªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sample #
+#                          s\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MT\   #
+#                          -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ #
+#                          ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples\TestA #
+#                          PP\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ #
+#                           -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨Ð #
+#                          Å¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples\Test #
+#                          APP\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\ #
+#                          CC2530EB\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ #
+#                          ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sam #
+#                          ples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\OS #
+#                          AL\MCU\CCSOC\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿ #
+#                          Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack #
+#                          \Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENT #
+#                          S\OSAL\INCLUDE\ -I C:\Users\yuan_hao\Desktop\´óÈýÉ #
+#                          Ï¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zsta #
+#                          ck\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONE #
+#                          NTS\STACK\AF\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿ #
+#                          Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack #
+#                          \Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENT #
+#                          S\STACK\NWK\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î #
+#                          ³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\ #
+#                          Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \STACK\SEC\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³ #
+#                          Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\S #
+#                          amples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          STACK\SAPI\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³ #
+#                          Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\S #
+#                          amples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          STACK\SYS\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì #
+#                          \ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sa #
+#                          mples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\S #
+#                          TACK\ZDO\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ #
+#                          ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sam #
+#                          ples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ZM #
+#                          AC\F8W\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\Îï #
+#                          ÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sampl #
+#                          es\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC #
+#                          \ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ #
+#                          ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples\Tes #
+#                          tAPP\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\S #
+#                          ADDR\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁª #
+#                          ÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples #
+#                          \TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\SERVIC #
+#                          ES\SDATA\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ #
+#                          ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sam #
+#                          ples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MA #
+#                          C\INCLUDE\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì #
+#                          \ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Sa #
+#                          mples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\M #
+#                          AC\HIGH_LEVEL\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ #
+#                          ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstac #
+#                          k\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\MAC\LOW_LEVEL\srf04\ -I                         #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\s #
+#                          rf04\SINGLE_CHIP\ -Ohz                             #
+#    List file          =  C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\EndDeviceEB-Pro\List\74LS164_8LED.lst     #
+#    Object file        =  C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\EndDeviceEB-Pro\Obj\74LS164_8LED.r51      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_1\Projects\zstack\Samples\TestAPP\Source\74LS164_8LED.c
+      1          #include<ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+      2          #include"74LS164_8LED.h"
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      3          static UCHAR LED_Map[]={0x3f,0x06,0x5b,0x4f,
+   \                     LED_Map:
+   \   000000                DS 14
+   \   00000E                REQUIRE `?<Initializer for LED_Map>`
+   \   00000E                REQUIRE __INIT_XDATA_I
+      4                                  0x66,0x6d,0x7d,0x07,
+      5                                  0x7f,0x6f,0x00,\
+      6                                  0x39,/*'C'Ð­µ÷Æ÷*/\
+      7                                  0x77,/*'R'Â·ÓÉÆ÷*/\
+      8                                  0x79/*'E'ÖÕ¶Ë*/};
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      9          void LS164_Cfg()
+   \                     LS164_Cfg:
+     10          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     11              P1SEL &=~0x0C;//xxxx 00xx  ÅäÖÃÎªÆÕÍ¨IOÄ£Ê½
+   \   000000   53F4F3       ANL     0xf4,#0xf3
+     12              P1DIR |=0x0C;//xxxx 11xx   ÅäÖÃÎªÊä³öÄ£Ê½
+   \   000003   43FE0C       ORL     0xfe,#0xc
+     13          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE P1SEL
+   \   000009                REQUIRE P1DIR
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     14          void LS164_BYTE(UCHAR Index) //P1.3  DATA   P1.2  CLK
+   \                     LS164_BYTE:
+     15          {  
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     16              UCHAR i=0;
+     17              UCHAR Data=LED_Map[Index];
+   \   000005   89..         MOV     ?V0 + 0,R1
+   \   000007   74..         MOV     A,#LED_Map & 0xff
+   \   000009   25..         ADD     A,?V0 + 0
+   \   00000B   F582         MOV     DPL,A
+   \   00000D   74..         MOV     A,#(LED_Map >> 8) & 0xff
+   \   00000F   3400         ADDC    A,#0x0
+   \   000011   F583         MOV     DPH,A
+   \   000013   E0           MOVX    A,@DPTR
+   \   000014   FA           MOV     R2,A
+   \   000015   7808         MOV     R0,#0x8
+     18              for(;i<8;i++)
+     19              {
+     20                  if(0x80 & Data)
+   \                     ??LS164_BYTE_0:
+   \   000017   EA           MOV     A,R2
+   \   000018   A2E7         MOV     C,0xE0 /* A   */.7
+   \   00001A   5004         JNC     ??LS164_BYTE_1
+     21                  {
+     22                      LS164_DATA=1;            
+   \   00001C   D293         SETB    0x90.3
+   \   00001E   8002         SJMP    ??LS164_BYTE_2
+     23                  }
+     24                  else
+     25                  {
+     26                      LS164_DATA=0; 
+   \                     ??LS164_BYTE_1:
+   \   000020   C293         CLR     0x90.3
+     27                  }
+     28                  Data=Data << 1;
+   \                     ??LS164_BYTE_2:
+   \   000022   C3           CLR     C
+   \   000023   33           RLC     A
+   \   000024   FA           MOV     R2,A
+     29                  LS164_CLK=0;
+   \   000025   C292         CLR     0x90.2
+     30                  LS164_CLK=1;
+   \   000027   D292         SETB    0x90.2
+     31              }
+   \   000029   18           DEC     R0
+   \   00002A   E8           MOV     A,R0
+   \   00002B   70EA         JNZ     ??LS164_BYTE_0
+     32          }
+   \   00002D   7F02         MOV     R7,#0x2
+   \   00002F   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000032                REQUIRE _A_P1
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for LED_Map>`:
+   \   000000   3F           DB 63
+   \   000001   06           DB 6
+   \   000002   5B           DB 91
+   \   000003   4F           DB 79
+   \   000004   66           DB 102
+   \   000005   6D           DB 109
+   \   000006   7D           DB 125
+   \   000007   07           DB 7
+   \   000008   7F           DB 127
+   \   000009   6F           DB 111
+   \   00000A   00           DB 0
+   \   00000B   39           DB 57
+   \   00000C   77           DB 119
+   \   00000D   79           DB 121
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??LS164_Cfg?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    LS164_Cfg
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??LS164_BYTE?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    LS164_BYTE
+
+   Maximum stack usage in bytes:
+
+     Function   ISTACK PSTACK XSTACK
+     --------   ------ ------ ------
+     LS164_BYTE     0      0     10
+     LS164_Cfg      0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label             Bytes
+     --------------             -----
+     _A_P1                         1
+     P1SEL                         1
+     P1DIR                         1
+     LED_Map                      14
+     LS164_Cfg                     9
+     LS164_BYTE                   50
+     ?<Initializer for LED_Map>   14
+     ??LS164_Cfg?relay             6
+     ??LS164_BYTE?relay            6
+
+ 
+ 59 bytes in segment BANKED_CODE
+ 12 bytes in segment BANK_RELAYS
+  3 bytes in segment SFR_AN
+ 14 bytes in segment XDATA_I
+ 14 bytes in segment XDATA_ID
+ 
+ 85 bytes of CODE  memory
+  0 bytes of DATA  memory (+ 3 bytes shared)
+ 14 bytes of XDATA memory
+
+Errors: none
+Warnings: none

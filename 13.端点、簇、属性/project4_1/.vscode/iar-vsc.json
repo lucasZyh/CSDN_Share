@@ -1,0 +1,18 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\Projects\\zstack\\Utilities\\OAD\\CC2530DB\\Boot.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\Projects\\zstack\\Utilities\\OAD\\CC2530DB\\Boot.eww": {
+      "configs": {
+        "${workspaceFolder}\\Projects\\zstack\\Utilities\\OAD\\CC2530DB\\Boot.ewp": "OAD Boot Loader"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\Projects\\zstack\\Utilities\\OAD\\CC2530DB\\Boot.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "D:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 6.0 Evaluation"
+  }
+}

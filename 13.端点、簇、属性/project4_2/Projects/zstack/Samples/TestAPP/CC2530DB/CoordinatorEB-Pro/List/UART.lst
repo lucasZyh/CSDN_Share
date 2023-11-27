@@ -1,0 +1,388 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         25/Oct/2023  17:05:10 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          Source\UART.c                                      #
+#    Command line       =  -f C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ #
+#                          ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Samples\TestA #
+#                          PP\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg   #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_APP_PENDING_QUEUE=TRUE                   #
+#                          -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f       #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg     #
+#                          (-DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          Source\UART.c -D ZIGBEEPRO -D ZTOOL_P1 -D MT_TASK  #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\yuan_hao\Desktop\ #
+#                          ´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects #
+#                          \zstack\Samples\TestAPP\CC2530DB\CoordinatorEB-Pro #
+#                          \List\ -lA C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\Îï #
+#                          ÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sampl #
+#                          es\TestAPP\CC2530DB\CoordinatorEB-Pro\List\        #
+#                          --diag_suppress Pe001,Pa010 -o                     #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\CoordinatorEB-Pro\Obj\ -e --debug         #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\yuan_hao\Desktop\ #
+#                          ´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects #
+#                          \zstack\Samples\TestAPP\CC2530DB\ -I               #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\..\SOURCE\ -I C:\Users\yuan_hao\Desktop\´ #
+#                          óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\ #
+#                          zstack\Samples\TestAPP\CC2530DB\..\..\..\ZMAIN\TI2 #
+#                          530DB\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁ #
+#                          ªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sample #
+#                          s\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MT\   #
+#                          -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ #
+#                          ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Samples\TestA #
+#                          PP\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\INCLUDE\ #
+#                           -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨Ð #
+#                          Å¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Samples\Test #
+#                          APP\CC2530DB\..\..\..\..\..\COMPONENTS\HAL\TARGET\ #
+#                          CC2530EB\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ #
+#                          ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sam #
+#                          ples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\OS #
+#                          AL\MCU\CCSOC\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿ #
+#                          Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack #
+#                          \Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENT #
+#                          S\OSAL\INCLUDE\ -I C:\Users\yuan_hao\Desktop\´óÈýÉ #
+#                          Ï¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zsta #
+#                          ck\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONE #
+#                          NTS\STACK\AF\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿ #
+#                          Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack #
+#                          \Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENT #
+#                          S\STACK\NWK\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î #
+#                          ³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\ #
+#                          Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS #
+#                          \STACK\SEC\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³ #
+#                          Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\S #
+#                          amples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          STACK\SAPI\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³ #
+#                          Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\S #
+#                          amples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ #
+#                          STACK\SYS\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì #
+#                          \ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sa #
+#                          mples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\S #
+#                          TACK\ZDO\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ #
+#                          ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sam #
+#                          ples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ZM #
+#                          AC\F8W\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\Îï #
+#                          ÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sampl #
+#                          es\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\ZMAC #
+#                          \ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ #
+#                          ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Samples\Tes #
+#                          tAPP\CC2530DB\..\..\..\..\..\COMPONENTS\SERVICES\S #
+#                          ADDR\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁª #
+#                          ÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Samples #
+#                          \TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\SERVIC #
+#                          ES\SDATA\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ #
+#                          ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sam #
+#                          ples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\MA #
+#                          C\INCLUDE\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì #
+#                          \ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Sa #
+#                          mples\TestAPP\CC2530DB\..\..\..\..\..\COMPONENTS\M #
+#                          AC\HIGH_LEVEL\ -I C:\Users\yuan_hao\Desktop\´óÈýÉÏ #
+#                          ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstac #
+#                          k\Samples\TestAPP\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\MAC\LOW_LEVEL\srf04\ -I                         #
+#                          C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\..\..\..\..\..\COMPONENTS\MAC\LOW_LEVEL\s #
+#                          rf04\SINGLE_CHIP\ -Ohz                             #
+#    List file          =  C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\CoordinatorEB-Pro\List\UART.lst           #
+#    Object file        =  C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Ê #
+#                          õ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\ #
+#                          CC2530DB\CoordinatorEB-Pro\Obj\UART.r51            #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\yuan_hao\Desktop\´óÈýÉÏ¿Î³Ì\ÎïÁªÍøÍ¨ÐÅ¼¼Êõ\ÊµÑé\project3_2\Projects\zstack\Samples\TestAPP\Source\UART.c
+      1          #include <ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0x86
+   \   unsigned char volatile __sfr U0CSR
+   \                     U0CSR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9e
+   \   unsigned char volatile __sfr CLKCONSTA
+   \                     CLKCONSTA:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc1
+   \   unsigned char volatile __sfr U0DBUF
+   \                     U0DBUF:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr U0BAUD
+   \                     U0BAUD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc4
+   \   unsigned char volatile __sfr U0UCR
+   \                     U0UCR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc5
+   \   unsigned char volatile __sfr U0GCR
+   \                     U0GCR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc6
+   \   unsigned char volatile __sfr CLKCONCMD
+   \                     CLKCONCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe8
+   \   union <unnamed> volatile __sfr _A_IRCON2
+   \                     _A_IRCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr PERCFG
+   \                     PERCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+      2          
+      3          #define uchar unsigned char
+      4          #define uint unsigned int
+      5          void InitUart();              //³õÊ¼»¯´®¿Ú
+      6          void Uart_Send_String(unsigned char *Data,int len);
+      7          
+      8          /**************************************************************** 
+      9             ´®¿Ú³õÊ¼»¯º¯Êý     
+     10          ***********************************************************/
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     11          void InitUart()
+   \                     InitUart:
+     12          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     13              CLKCONCMD &= ~0x40; // ÉèÖÃÏµÍ³Ê±ÖÓÔ´Îª 32MHZ¾§Õñ
+   \   000000   53C6BF       ANL     0xc6,#0xbf
+     14              while(CLKCONSTA & 0x40);                     // µÈ´ý¾§ÕñÎÈ¶¨ 
+   \                     ??InitUart_0:
+   \   000003   E59E         MOV     A,0x9e
+   \   000005   A2E6         MOV     C,0xE0 /* A   */.6
+   \   000007   40FA         JC      ??InitUart_0
+     15              CLKCONCMD &= ~0x47;                          // ÉèÖÃÏµÍ³Ö÷Ê±ÖÓÆµÂÊÎª 32MHZ
+   \   000009   53C6B8       ANL     0xc6,#0xb8
+     16          
+     17            PERCFG&=~0x01;   //ÓÐ2¸ö±¸ÓÃÎ»ÖÃ£¬0Ê¹ÓÃ±¸ÓÃÎ»ÖÃ1£»1Ê¹ÓÃ±¸ÓÃÎ»ÖÃ2
+   \   00000C   53F1FE       ANL     0xf1,#0xfe
+     18            P0SEL |= 0x0C;   //P0_2 RXD P0_3 TXD ÍâÉè¹¦ÄÜ 0000 1100
+   \   00000F   43F30C       ORL     0xf3,#0xc
+     19           
+     20            U0CSR |= 0xC0;  //´®¿Ú½ÓÊÕÊ¹ÄÜ  1100 0000 ¹¤×÷UARTÄ£Ê½+ÔÊÐí½ÓÊÜ
+   \   000012   4386C0       ORL     0x86,#0xc0
+     21            U0UCR |= 0x00;  //ÎÞÆæÅ¼Ð£Ñé£¬1Î»Í£Ö¹Î»
+   \   000015   85C4C4       MOV     0xc4,0xc4
+     22           
+     23            U0GCR |= 11;           //U0GCRÓëU0BAUDÅäºÏ     
+   \   000018   43C50B       ORL     0xc5,#0xb
+     24            U0BAUD |= 216;       // ²¨ÌØÂÊÉèÎª115200 
+   \   00001B   43C2D8       ORL     0xc2,#0xd8
+     25           
+     26            IEN0 |= 0X04;     //¿ª´®¿Ú½ÓÊÕÖÐ¶Ï 'URX0IE = 1',Ò²¿ÉÒÔÐ´³É URX0IE=1;
+   \   00001E   D2AA         SETB    0xa8.2
+     27            EA=1;
+   \   000020   D2AF         SETB    0xa8.7
+     28              
+     29          }
+   \   000022   02....       LJMP    ?BRET
+   \   000025                REQUIRE CLKCONCMD
+   \   000025                REQUIRE CLKCONSTA
+   \   000025                REQUIRE PERCFG
+   \   000025                REQUIRE P0SEL
+   \   000025                REQUIRE U0CSR
+   \   000025                REQUIRE U0UCR
+   \   000025                REQUIRE U0GCR
+   \   000025                REQUIRE U0BAUD
+   \   000025                REQUIRE _A_IEN0
+     30          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     31          void Uart0_SendCh(char ch)
+   \                     Uart0_SendCh:
+     32          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     33              U0DBUF = ch;
+   \   000000   89C1         MOV     0xc1,R1
+     34              while(UTX0IF == 0);
+   \                     ??Uart0_SendCh_0:
+   \   000002   A2E9         MOV     C,0xe8.1
+   \   000004   50FC         JNC     ??Uart0_SendCh_0
+     35              UTX0IF = 0;
+   \   000006   C2E9         CLR     0xe8.1
+     36          }
+   \   000008   02....       LJMP    ?BRET
+   \   00000B                REQUIRE U0DBUF
+   \   00000B                REQUIRE _A_IRCON2
+     37          /**************************************************************** 
+     38          ´®¿Ú·¢ËÍ×Ö·û´®º¯Êý    
+     39          ****************************************************************/ 
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     40          void Uart_Send_String(unsigned char *Data,int len) 
+   \                     Uart_Send_String:
+     41          {
+   \   000000   74F4         MOV     A,#-0xc
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV     A,R2
+   \   000006   FE           MOV     R6,A
+   \   000007   EB           MOV     A,R3
+   \   000008   FF           MOV     R7,A
+   \   000009   8C..         MOV     ?V0 + 0,R4
+   \   00000B   8D..         MOV     ?V0 + 1,R5
+     42           { 
+     43            int j; 
+     44            for(j=0;j<len;j++) 
+   \   00000D   75..00       MOV     ?V0 + 2,#0x0
+   \   000010   75..00       MOV     ?V0 + 3,#0x0
+   \   000013   801E         SJMP    ??Uart_Send_String_0
+     45            { 
+     46               Uart0_SendCh(*Data++); 
+   \                     ??Uart_Send_String_1:
+   \   000015                ; Setup parameters for call to function Uart0_SendCh
+   \   000015   8E82         MOV     DPL,R6
+   \   000017   8F83         MOV     DPH,R7
+   \   000019   E0           MOVX    A,@DPTR
+   \   00001A   F9           MOV     R1,A
+   \   00001B   12....       LCALL   ??Uart0_SendCh?relay
+   \   00001E   8E82         MOV     DPL,R6
+   \   000020   8F83         MOV     DPH,R7
+   \   000022   A3           INC     DPTR
+   \   000023   AE82         MOV     R6,DPL
+   \   000025   AF83         MOV     R7,DPH
+     47            } 
+   \   000027   E5..         MOV     A,?V0 + 2
+   \   000029   2401         ADD     A,#0x1
+   \   00002B   F5..         MOV     ?V0 + 2,A
+   \   00002D   E5..         MOV     A,?V0 + 3
+   \   00002F   3400         ADDC    A,#0x0
+   \   000031   F5..         MOV     ?V0 + 3,A
+   \                     ??Uart_Send_String_0:
+   \   000033   C3           CLR     C
+   \   000034   E5..         MOV     A,?V0 + 2
+   \   000036   95..         SUBB    A,?V0 + 0
+   \   000038   E5..         MOV     A,?V0 + 3
+   \   00003A   95..         SUBB    A,?V0 + 1
+   \   00003C   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   00003E   65D0         XRL     A,PSW
+   \   000040   33           RLC     A
+   \   000041   40D2         JC      ??Uart_Send_String_1
+     48           }
+     49          }
+   \   000043   7F04         MOV     R7,#0x4
+   \   000045   02....       LJMP    ?BANKED_LEAVE_XDATA
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??InitUart?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    InitUart
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Uart0_SendCh?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Uart0_SendCh
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??Uart_Send_String?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Uart_Send_String
+
+   Maximum stack usage in bytes:
+
+     Function          ISTACK PSTACK XSTACK
+     --------          ------ ------ ------
+     InitUart              0      0      0
+     Uart0_SendCh          0      0     12
+     Uart_Send_String      0      0     12
+       -> Uart0_SendCh     0      0     24
+
+
+   Segment part sizes:
+
+     Function/Label           Bytes
+     --------------           -----
+     U0CSR                       1
+     CLKCONSTA                   1
+     _A_IEN0                     1
+     U0DBUF                      1
+     U0BAUD                      1
+     U0UCR                       1
+     U0GCR                       1
+     CLKCONCMD                   1
+     _A_IRCON2                   1
+     PERCFG                      1
+     P0SEL                       1
+     InitUart                   37
+     Uart0_SendCh               11
+     Uart_Send_String           72
+     ??InitUart?relay            6
+     ??Uart0_SendCh?relay        6
+     ??Uart_Send_String?relay    6
+
+ 
+ 120 bytes in segment BANKED_CODE
+  18 bytes in segment BANK_RELAYS
+  11 bytes in segment SFR_AN
+ 
+ 138 bytes of CODE memory
+   0 bytes of DATA memory (+ 11 bytes shared)
+
+Errors: none
+Warnings: none
