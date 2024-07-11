@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/rec/rec",
+    "pages/lineset/lineset"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "物联网云应用",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{  
+      "pagePath": "pages/index/index",
+      "text": "控制",
+      "iconPath": "/pages/images/控制1.png", 
+      "selectedIconPath": "/pages/images/控制2.png"
+    },{
+      "pagePath": "pages/lineset/lineset",
+      "text": "数据显示",
+      "iconPath": "./pages/images/line.png",
+      "selectedIconPath": "./pages/images/line1.png"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

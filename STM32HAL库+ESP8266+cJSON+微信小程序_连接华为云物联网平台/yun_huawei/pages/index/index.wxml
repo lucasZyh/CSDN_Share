@@ -1,0 +1,84 @@
+<view class="zong">
+<!-- 身体-->
+<view class="body">
+
+<view class="onebody">
+<!--温度-->
+<view class="data">
+<view class="data-logo">
+<image src="../image/温度.png" ></image>
+</view>
+
+<view class="data-text">
+<text class="data-title">温度</text>
+<text class="data-value">{{temp}}℃</text>
+</view>
+<!--注释-->
+</view>
+
+<!--湿度-->
+<view class="data">
+<view class="data-logo">
+<image src="../image/湿度.png" ></image>
+</view>
+
+<view class="data-text">
+<text class="data-title">湿度</text>
+<text class="data-value">{{humi}}％</text>
+</view>
+<!--注释-->
+</view>
+</view>
+
+<view class="onebody">
+
+<!--光强-->
+<view class="data">
+<view class="data-logo">
+<image src="../image/阳光.png" ></image>
+</view>
+<view class="data-text">
+<text class="data-title">亮度</text>
+<text class="data-value">{{light}}LX</text>
+</view>
+<!--注释-->
+</view>
+
+<!--灯-->
+<view class="data">
+<view class="data-logo">
+<image src="../image/手电筒.png" ></image>
+</view>
+<!--注释-->
+<view class="data-text">
+<text class="data-title">开关灯</text>
+<switch checked = "{{flag_l}}"></switch>
+</view>
+<!--注释-->
+</view>
+
+</view>
+
+</view>
+</view>
+
+<block >
+<view class="tui-content">
+  <view class="tui-slider-head">温度阈值设置</view>
+  <view class="tui-slider-box">
+    <slider style="position: relative; left: 0rpx; top: -20rpx" bindchange="tempSet" value="{{tset}}" show-value/>
+  </view>
+</view>
+<view class="tui-content">
+  <view class="tui-slider-head">湿度阈值设置</view>
+  <view class="tui-slider-box">
+    <slider style="position: relative; left: 0rpx; top: -20rpx"  min="0" max="100" value="{{hset}}" show-value/>
+  </view>
+</view>
+<view class="tui-content">
+  <view class="tui-slider-head">光照阈值设置</view>
+  <view class="tui-slider-box">
+    <slider style="position: relative; left: 0rpx; top: -20rpx" bindchange="lightSet" value="{{lset}}" show-value/>
+  </view>
+</view>
+</block>
